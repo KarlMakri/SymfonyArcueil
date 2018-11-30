@@ -1,0 +1,62 @@
+{% extends 'base.html.twig' %}
+
+{%  block title %}Liste des Couleurs{% endblock %}
+
+{% block body %}
+
+    <div class="container">
+
+            <h1>Liste des Couleurs</h1><br>
+
+            <a class="btn btn-primary" href="{{path('color_add')}}">Ajouter une couleur</a>
+
+            <br>
+
+            <div id="modal">
+                <div >T'es sûr de vouloir faire ça ?</div>
+                <div>
+                    <button>Oui</button>
+                    <button>Non</button>
+                </div>
+            </div>
+
+            <br>
+
+            <table class="table">
+
+                <thead class="thead-dark">
+                <tr>
+                    <th>Couleur en Anglais</th>
+                    <th>Couleur en Français</th>
+                    <th>Couleur en Héxadécimale</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+
+                <tbody>
+
+                {% for color in colors %}
+
+                    <tr>
+                        <td>{{ color.nameEn }}</td>
+                        <td>{{ color.nameFr }}</td>
+                        <td>{{ color.hexa }}</td>
+                        <td>
+                            <a href="/color/{{ color.id }}/edit" class="btn btn-sm btn-primary">Modifier</a>&nbsp;&nbsp;
+                            <a href="/color/{{ color.id }}/delete" class="btn btn-sm btn-danger">Supprimer</a>
+                        </td>
+                    </tr>
+
+                {% endfor %}
+
+                </tbody>
+
+            </table>
+
+    </div>
+
+{% endblock %}
+
+{% block js %}
+    <script src="/js/app.js"></script>
+{% endblock %}

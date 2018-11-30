@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Color</title>
+    <style>
+        .rectangle{
+            width: {{ width }}px;
+            height: {{ height }}px;
+            background-color: {{ color }};
+            margin-bottom: 25px;
+        }
+    </style>
+
+</head>
+<body>
+<h1>Color</h1>
+
+    {% if nb > 10 %}
+
+        <p>Impossible</p>
+
+    {% else %}
+
+    {% for i in 1..nb %}
+
+        <div class="rectangle">{{ i }}</div>
+
+    {% endfor %}
+
+    {% endif %}
+
+        {#Couleur : {{ color }}#}
+
+        {#<div class="rectangle">{{ color }}</div>#}
+
+
+
+<script>
+    console.log('JS Ok');
+</script>
+</body>
+</html>

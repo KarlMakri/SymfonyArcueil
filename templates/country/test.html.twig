@@ -1,0 +1,18 @@
+{# src/templates/country#}
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <h1>Test Country</h1>
+
+    {{ dump(countries) }}
+
+    {% for country in countries %}
+
+       <div class="container">
+           <p>{{ country.name }}</p>
+       </div>
+
+    {% endfor %}
+
+{% endblock %}

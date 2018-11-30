@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block body %}
+
+    <div class="container"><br>
+        <a href="{{ path('topic_add') }}" class="btn btn-primary">Ajouer un Thème</a><br><br>
+
+        <table class="table table-striped table-bordered">
+            {% for topic in topics %}
+
+                <tr>
+                    <td>{{ topic.name }}&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                    <td><a href="/topic/{{ topic.id }}/delete" class="btn btn-sm btn-danger">Supprimer</a></td>
+                </tr>
+
+            {% endfor %}
+        </table>
+    </div>
+
+{% endblock %}

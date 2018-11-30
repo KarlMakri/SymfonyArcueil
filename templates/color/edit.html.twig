@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{%  block title %}Modification d'une Couleur{% endblock %}
+
+{% block body %}
+
+    <section class="container">
+
+
+            <h1>Modification d'un Couleur</h1>
+
+            {% if method == 'POST' %}
+
+                <section >
+                    {% if success %}
+
+                        Couleur Modifiée !
+
+                    {% else %}
+
+                        Couleur non Modifiée, Sorry !!
+
+                    {% endif %}
+                </section>
+
+            {% endif %}
+
+
+
+
+            <form method="post">
+
+                <input type="text" name="nameEn" placeholder="Nom en Anglais" class="form-control" value="{{ color.nameEn }}"><br>
+
+                <input type="text" name="nameFr" placeholder="Nom en Français" class="form-control" value="{{ color.nameFr }}"><br>
+
+                <input type="text" name="hexa" placeholder="Couleur en Héxadécimal" class="form-control" value="{{ color.hexa }}"><br>
+
+                <button class="btn btn-primary">Mettre à Jour</button>
+
+            </form>
+
+    </section>
+
+{% endblock %}

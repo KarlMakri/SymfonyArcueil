@@ -1,0 +1,74 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+
+    <div class="container">
+        <a href="{{ path('proverb_add') }}" class="btn btn-primary">Ajouter un Proverb</a><br><br>
+
+        {#<table class="table table-striped">#}
+            {#<thead>#}
+            {#<tr>#}
+                {#<th>Proverbes</th>#}
+                {#<th>Pays</th>#}
+                {#<th>Thèmes</th>#}
+                {#<th>Popularité</th>#}
+            {#</tr>#}
+            {#</thead>#}
+
+            {#<tbody>#}
+            {#{% for proverb in proverbs %}#}
+                {#<tr>#}
+                    {#<td>{{ proverb.body }}</td>#}
+                    {#<td>{{ proverb.country.name }}</td>#}
+                    {#<td>#}
+                        {#{% for topic in proverb.topic %}#}
+                            {#{{ topic.name }},#}
+                        {#{% endfor %}#}
+                    {#</td>#}
+                    {#<td>{{ proverb.popularity }}</td>#}
+                {#</tr>#}
+            {#{% endfor %}#}
+            {#</tbody>#}
+
+        {#</table>#}
+        {% for proverb in proverbs %}
+            {#<div id="proverb">#}
+
+
+                        {#<p>{{ proverb.body }}#}
+
+                            {#<br><i>Proverbe <strong>{{ proverb.country.name }}</strong></i>&nbsp;&nbsp;#}
+                            {#<i>Thème :#}
+                                {#{% for topic in proverb.topic %}#}
+                                    {#{{ topic.name }},#}
+                                {#{% endfor %}#}
+                            {#</i>#}
+                            {#<i><img id="like" class="fas fa-heart" src="{{ asset('img/like.png') }}" alt=""> : {{ proverb.popularity }}</i>#}
+                            {#<i><span class="glyphicon glyphicon-thumbs-up"></span> : {{ proverb.popularity }}</i>#}
+
+                        {#</p>#}
+
+
+
+
+
+            {#</div>#}
+
+        <article class="proverb1">
+            <header>
+                {% for topic in proverb.topic %}
+                    {{ topic.name }}
+                {% endfor %}
+            </header>
+            {{ proverb.body }}
+            <footer>
+                Proverbe : {{ proverb.country.adjective }}
+            </footer>
+        </article>
+
+
+        {% endfor %}
+    </div>
+
+{% endblock %}

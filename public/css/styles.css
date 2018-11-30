@@ -1,0 +1,79 @@
+/* Listes */
+
+nav ul{
+
+    list-style: none;
+}
+
+nav ul li{
+
+    display: inline-block;
+    margin-right: 20px;
+}
+
+#modal{
+
+    width:  300px;
+    height: 80px;
+    background-color: orangered;
+    color: white;
+    border-radius: 7px;
+    text-align: center;
+    padding: 8px;
+    font-size: 1.4em;
+    /*display: none;*/
+    position: absolute;
+    top :-100px;
+    left: 200px
+}
+
+#proverb{
+
+    width: 1300px;
+    height: 230px;
+    background-color: #00b3ee;
+    color: white;
+    border-radius: 7px;
+    text-align: center;
+    padding: 8px;
+    font-size: 1.4em;
+}
+
+strong{
+
+    color: #5E740B ;
+}
+
+span{
+
+    color: #005cbf;
+}
+
+.proverb1{
+
+    background-color: #ddd;
+    padding: 20px;
+    border-radius: 20px;
+    /*margin-bottom: 30px;*/
+    font-size: 1.2em;
+    width: 50%;
+    margin: 20px auto;
+
+}
+
+.proverb1 header{
+
+    font-size: .9rem;
+    text-align: right;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+}
+
+
+.proverb1 footer{
+
+    font-size: .9rem;
+    color: #999;
+    padding-bottom: 10px;
+
+}
